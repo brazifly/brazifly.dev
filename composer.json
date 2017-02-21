@@ -12,8 +12,7 @@
     ],
     "require": {
         "php": ">=5.6.4",
-        "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0",
+        "barryvdh/laravel-ide-helper": "^2.3",
         "cartalyst/sentinel": "^2.0",
         "cviebrock/eloquent-sluggable": "^4.2",
         "cviebrock/eloquent-taggable": "2.1.0-beta",
@@ -24,6 +23,8 @@
         "infyomlabs/swagger-generator": "dev-master",
         "intervention/image": "^2.3",
         "jlapp/swaggervel": "dev-master",
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "~1.0",
         "laravelcollective/html": "5.4.*",
         "yajra/laravel-datatables-oracle": "^6.24"
     },
@@ -31,8 +32,7 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.0",
-        "barryvdh/laravel-debugbar": "^2.3",
-        "barryvdh/laravel-ide-helper": "^2.2"
+        "barryvdh/laravel-debugbar": "^2.3"
     },
     "autoload": {
         "classmap": [
@@ -56,9 +56,12 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
             "php artisan optimize"
         ]
-    },
+     },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true

@@ -81,13 +81,15 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li {!! (Request::is('/') ? 'class="active"' : '') !!}><a href="{{ route('home') }}"> Home</a>
                     </li>
-                    <li class="dropdown {!! (Request::is('typography') || Request::is('advancedfeatures') || Request::is('grid') ? 'active' : '') !!}"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Features</a>
+                    <li class="dropdown {!! (Request::is('inventory') || Request::is('materialcatalog') || Request::is('fishlogger') || Request::is('fishingspots')? 'active' : '') !!}"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Features</a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ URL::to('typography') }}">Typography</a>
+                            <li><a href="{{ URL::to('inventory') }}">Inventory</a>
                             </li>
-                            <li><a href="{{ URL::to('advancedfeatures') }}">Advanced Features</a>
+                            <li><a href="{{ URL::to('materialcatalog') }}">Material Catalog</a>
                             </li>
-                            <li><a href="{{ URL::to('grid') }}">Grid System</a>
+                            <li><a href="{{ URL::to('fishlogger') }}">Fish Logger</a>
+                            </li>
+                            <li><a href="{{ URL::to('fishingspots') }}">Fishing Spots</a>
                             </li>
                         </ul>
                     </li>

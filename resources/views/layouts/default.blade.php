@@ -13,7 +13,7 @@
     <![endif]-->
     <title>
     	@section('title')
-        | BraziFly
+        | Welcome to BraziFly
         @show
     </title>
     <!--global css starts-->
